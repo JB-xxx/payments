@@ -17,8 +17,9 @@ app.use(helmet());
 
 //Set up mongoose connection
 var mongoose = require('mongoose');
-  //var mongoDB = 'mongodb+srv://Mijnvoorraad12:Devoorraad12@voorraadcluster-qwgrl.azure.mongodb.net/mijn_voorraad';
-var mongoDB = 'mongodb+srv://MoneybookJan12:MoneybookGera12@baars2-kgzr1.mongodb.net/moneybook';
+// Set up mongoose connection
+var dev_db_url = 'mongodb+srv://MoneybookJan12:MoneybookGera12@baars2-kgzr1.mongodb.net/moneybook?retryWrites=true'
+var mongoDB = process.env.MONGODB_URI || dev_db_url;
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
