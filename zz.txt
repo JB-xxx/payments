@@ -1,0 +1,6 @@
+
+
+mongodb+srv://MoneybookJan12:MoneybookGera12@baars2-kgzr1.mongodb.net/moneybook?retryWrites=true&w=majority
+
+
+node popdata 'mongodb+srv://MoneybookJan12:MoneybookGera12@baars2-kgzr1.mongodb.net/moneybook'
